@@ -1,6 +1,6 @@
 [submodule "themes/hugo-classic"]
 	path = themes/hugo-classic
 	url = git@github.com:goodroot/hugo-classic.git
-[submodule "public"]
-	path = public
+[submodule "docs"]
+	path = docs
 	url = https://github.com/Beluuuuuuga/beluuuuuuga.github.io

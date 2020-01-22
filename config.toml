@@ -2,3 +2,5 @@ baseURL = "https://beluuuuuuga.github.io/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "hugo-classic"
+publishDir = "docs"
+canonifyurls = true
