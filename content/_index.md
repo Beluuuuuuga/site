@@ -7,13 +7,13 @@ title: Home
   src="/images/partywizard.gif"
   alt="Kellen Face">
 
-# Hugo Classic
+# Slapdash McGuffin
 
-### For text focused goodness
+### Hitchcock explained
 
-About twenty years ago Jobs and Wozniak, the founders of Apple, came up with the very strange idea of selling information processing machines for use in the home. But around the same time, Bill Gates and Paul Allen came up with an idea even stranger and more fantastical: **selling computer operating systems**.
+It might be a Scottish name, taken from a story about two men on a train. One man says, 'What's that package up there in the baggage rack?' And the other answers, 'Oh, that's a MacGuffin'. The first one asks, 'What's a MacGuffin?' 'Well,' the other man says, 'it's an apparatus for trapping lions in the Scottish Highlands.' The first man says, 'But there are no lions in the Scottish Highlands,' and the other one answers, 'Well then, that's no MacGuffin!' 
 
-This was much weirder than the idea of Jobs and Wozniak.
+**So you see that a MacGuffin is actually nothing at all.**
 
 ~~~ruby
 def word_up(value)

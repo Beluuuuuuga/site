@@ -8,24 +8,24 @@ tags:
   - Keras
 ---
 
-Knowlege
+Knowledge
 ============
 
 Model
 ------------
-* Tensorflowのモデルはmodel-ckpt.meta, model-ckpt.data-0000-of-00001, model-ckpt.index, checkpointの4つの変数を持つ<sup><a href=#1>*1</a><sup>
+* Tensorflowのモデルはmodel-ckpt.meta, model-ckpt.data-0000-of-00001, model-ckpt.index, checkpointの4つの変数を持つ<sup><a href=#1a>*1</a><sup>
 * ウェブサイトなどでデプロイするときに一つにまとめた.pbファイルにする
-* kerasで保存する対象とそのコード。くわしくは下記サイトを参照<sup><a href=#2>*2</a><sup>
+* kerasで保存する対象とそのコード。くわしくは下記サイトを参照<sup><a href=#2a>*2</a><sup>
 
 保存の関数|読み込みの関数    |対象(拡張子)
 ----|------------|-----------------------------------------
-model.save(my_model.h5)  |model = load_model('my_model.h5')     |アーキテクチャ + 重み + オプティマイザの状態（.hdf5 or .h）
+model.save('hoge.h5')|model = load_model('hoge.h5')|アーキテクチャ + 重み + オプティマイザの状態（.hdf5 or .h）
 json_string = model.to_json()  |model = model_from_json(json_string) |モデルのアーキテクチャ（weightパラメータや学習時の設定は含まない）(.json or .yml)
-model.save_weights('my_model_weights.h5')  |model.load_weights('my_model_weights.h5')       |モデルの重みのみ
+model.save_weights('hoge.h5')|model.load_weights('hoge.h5')|モデルの重みのみ(.hdf5 or .h)
 
 ### References ###
-* <a href=#1>*1</a>:[Freeze Tensorflow models and serve on web](https://cv-tricks.com/how-to/freeze-tensorflow-models/)
-* <a href=#1>*2</a>:[Keras FAQ: Kerasに関するよくある質問](https://keras.io/ja/getting-started/faq/)
+* <a href=#1a>*1</a>:[Freeze Tensorflow models and serve on web](https://cv-tricks.com/how-to/freeze-tensorflow-models/)
+* <a href=#2a>*2</a>:[Keras FAQ: Kerasに関するよくある質問](https://keras.io/ja/getting-started/faq/)
 
 
 TF2.0
@@ -70,7 +70,7 @@ TF1.0
 Model save and load
 ------------
 
-* .jsonと.h(.hdf5)で読み込み.pbで保存。読み込みできないのでウソの可能性がある。[site](https://tutorialmore.com/questions-139135.htm) 
+* .jsonと.h(.hdf5)で読み込み.pbで保存。読み込みできないのでウソの可能性がある<sup><a href=#1c>*1</a><sup>
 
 ~~~python
 import tensorflow as tf
@@ -130,9 +130,10 @@ logging.info("save pb successfully！")
 ~~~
 
 ### References ###
-* [How to freeze a graph in Tensorflow](https://laid.delanover.com/how-to-freeze-a-graph-in-tensorflow/)
-* [How to restore Tensorflow model from .pb file in python?](https://stackoverflow.com/questions/50632258/how-to-restore-tensorflow-model-from-pb-file-in-python)
-* [How to convert trained Keras model to a single TensorFlow .pb file and make prediction(https://www.dlology.com/blog/how-to-convert-trained-keras-model-to-tensorflow-and-make-prediction/)
+* <a href=#1c>*1</a>:[kerasモデルh5ファイルをテンソルフロー保存モデル（pb）に変換する方法](https://tutorialmore.com/questions-139135.htm) 
+* <a href=#2c>*2</a>:[How to freeze a graph in Tensorflow](https://laid.delanover.com/how-to-freeze-a-graph-in-tensorflow/)
+* <a href=#3c>*3</a>:[How to restore Tensorflow model from .pb file in python?](https://stackoverflow.com/questions/50632258/how-to-restore-tensorflow-model-from-pb-file-in-python)
+* <a href=#4c>*4</a>:[How to convert trained Keras model to a single TensorFlow .pb file and make prediction](https://www.dlology.com/blog/how-to-convert-trained-keras-model-to-tensorflow-and-make-prediction/)
 
 Keras
 ============
@@ -144,16 +145,18 @@ Model save and load
 model.save_weights('model.hdf5')
 ~~~
 
-* load_modelでパスを指定して読み込むことでエラーを解消。[site](https://stackoverflow.com/questions/47266383/save-and-load-weights-in-keras)
+* load_modelでパスを指定して読み込むことでエラーを解消<sup><a href=#1b>*1</a><sup>
 
 ~~~python
 from keras.models import load_model
 model = load_model('model.h5')
 ~~~
 
-* カスタムされたモデルは引数をつけないとロードできない。[site](https://teratail.com/questions/112052?link=qa_related_pc)
+* カスタムされたモデルは引数をつけないとロードできない<sup><a href=#2b>*2</a><sup>
 
 ### References ###
-* [[TF]KerasでModelとParameterをLoad/Saveする方法](https://qiita.com/supersaiakujin/items/b9c9da9497c2163d5a74)
-* [Kerasで可視化いろいろ](https://www.slideshare.net/bathtimefish/keras-75584966)  
+* <a href=#1b>*1</a>:[Save and load weights in keras](https://stackoverflow.com/questions/47266383/save-and-load-weights-in-keras)
+* <a href=#2b>*2</a>:[kerasのモデルのload_modelでエラー](https://teratail.com/questions/112052?link=qa_related_pc)
+* <a href=#3b>*3</a>:[[TF]KerasでModelとParameterをLoad/Saveする方法](https://qiita.com/supersaiakujin/items/b9c9da9497c2163d5a74)
+* <a href=#4b>*4</a>:[Kerasで可視化いろいろ](https://www.slideshare.net/bathtimefish/keras-75584966)  
   * よさそうなのでやってみる
