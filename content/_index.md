@@ -4,7 +4,7 @@ title: Home
 
 <img
   id="main-image"
-  src="/images/partywizard.gif"
+  src="/images/gifmagazine.gif"
   alt="Kellen Face">
 
 # Slapdash McGuffin
