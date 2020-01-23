@@ -14,6 +14,18 @@ Knowlege
 
 Model
 ------------
+* Tensorflowのモデルはmodel-ckpt.meta, model-ckpt.data-0000-of-00001, model-ckpt.index, checkpointの4つの変数を持つ
+* ウェブサイトなどでデプロイするときに一つにまとめた.pbファイルにする
+
+
+* kerasで保存する対象とそのコード。くわしくは下記サイトを参照
+
+保存の関数|読み込みの関数    |対象(拡張子)
+----|------------|-----------------------------------------
+model.save(my_model.h5)  |model = load_model('my_model.h5')     |アーキテクチャ + 重み + オプティマイザの状態（.hdf5 or .h）
+json_string = model.to_json()  |model = model_from_json(json_string) |モデルのアーキテクチャ（weightパラメータや学習時の設定は含まない）(.json or .yml)
+model.save_weights('my_model_weights.h5')  |model.load_weights('my_model_weights.h5')       |モデルの重みのみ
+
 ### References ###
 * [Freeze Tensorflow models and serve on web](https://cv-tricks.com/how-to/freeze-tensorflow-models/)
 * [Keras FAQ: Kerasに関するよくある質問](https://keras.io/ja/getting-started/faq/)
