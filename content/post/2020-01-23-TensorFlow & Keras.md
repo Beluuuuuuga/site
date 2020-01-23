@@ -135,6 +135,7 @@ logging.info("save pb successfully！")
 ### References ###
 * [How to freeze a graph in Tensorflow](https://laid.delanover.com/how-to-freeze-a-graph-in-tensorflow/)
 * [How to restore Tensorflow model from .pb file in python?](https://stackoverflow.com/questions/50632258/how-to-restore-tensorflow-model-from-pb-file-in-python)
+* [How to convert trained Keras model to a single TensorFlow .pb file and make prediction(https://www.dlology.com/blog/how-to-convert-trained-keras-model-to-tensorflow-and-make-prediction/)
 
 Keras
 ============
