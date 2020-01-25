@@ -1,5 +1,5 @@
 ---
-title: "OpenCV4"
+title: "OpenCV4環境構築"
 date: '2020-01-23'
 categories:
   - ComputerVision

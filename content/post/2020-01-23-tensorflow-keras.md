@@ -1,5 +1,5 @@
 ---
-title: "TensorFlow & Keras"
+title: "TensorFlow & Kerasのモデル"
 date: '2020-01-23'
 categories:
   - MachineLearning

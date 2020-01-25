@@ -20,9 +20,10 @@ footnotereturnlinkcontents = "↩"
     name = "Tags"
     url = "/tags/"
     weight = 2
-[[menu.feed]]
-    name = "Subscribe"
-    url = "/sites.html"
+[[menu.main]]
+    name = "Sites"
+    url = "/Sites/"
+    weight = 3
 
 [params]
     description = "A simple, minimal blog for those who love text."
